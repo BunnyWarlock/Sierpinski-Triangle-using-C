@@ -8,9 +8,9 @@ unsigned long long int pascal_values (int n, int r, int sto[]){
     if (r == 0 || r == n)
         return 1;
     if (r == 1 || r == n - 1)
-        return n%2;
+        return n&1;
     else
-        return (sto[r] + sto[r + 1])%2;
+        return (sto[r] + sto[r + 1])&1;
 }
 
 void main (){
